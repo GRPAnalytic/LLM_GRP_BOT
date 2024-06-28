@@ -1,0 +1,53 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Answer for user ${user} questions",
+            "wrap": true,
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Q: ${question}",
+            "separator": true,
+            "wrap": true,
+            "maxLines": 2
+        },
+        {
+            "type": "TextBlock",
+            "text": "A: ${answer}",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Additional info: \n${additional_info}",
+            "size": "Small",
+            "isSubtle": true,
+            "$when": "${additional_info != \"\"}",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Context: ${context}",
+            "spacing": "Medium",
+            "separator": true,
+            "size": "Small",
+            "maxLines": 2,
+            "isSubtle": true,
+            "color": "Default",
+            "weight": "Default",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Included Tables: ${tables}",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true
+        }
+    ]
+}

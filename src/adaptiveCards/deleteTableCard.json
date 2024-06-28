@@ -1,0 +1,33 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Delete Availabe Table"
+        },
+        {
+            "id": "table.delete.text",
+            "type": "Input.Text",
+            "placeholder": "Delete database table id here...",
+            "label": "Delete Available Table ID",
+            "spacing": "Medium",
+            "separator": true,
+            "isRequired": true,
+            "errorMessage": "Please input table ID",
+            "value": "",
+            "inlineAction": {
+                "type": "Action.Submit",
+                "id": "table.delete.save",
+                "title": "Delete",
+                "style": "destructive",
+                "data": {
+                    "action": "table.delete.save"
+                }
+            }
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6"
+}

@@ -1,0 +1,32 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Add Availabe Table"
+        },
+        {
+            "id": "table.add.text",
+            "type": "Input.Text",
+            "placeholder": "Add database table name here...",
+            "label": "Add Available Table Name",
+            "spacing": "Medium",
+            "separator": true,
+            "isRequired": true,
+            "errorMessage": "Please input table name",
+            "value": "",
+            "inlineAction": {
+                "type": "Action.Submit",
+                "id": "table.add.save",
+                "title": "Save",
+                "data": {
+                    "action": "table.add.save"
+                }
+            }
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6"
+}

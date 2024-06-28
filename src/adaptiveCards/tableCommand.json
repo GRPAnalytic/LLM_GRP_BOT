@@ -1,0 +1,143 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Available Tables",
+                            "wrap": true,
+                            "style": "heading",
+                            "weight": "Bolder",
+                            "color": "Accent",
+                            "isSubtle": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "horizontalAlignment": "Right",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        {
+                                            "type": "ActionSet",
+                                            "actions": [
+                                                {
+                                                    "type": "Action.Submit",
+                                                    "title": "Add",
+                                                    "data": {
+                                                        "action": "table.add"
+                                                    },
+                                                    "style": "positive"
+                                                }
+                                            ],
+                                            "horizontalAlignment": "Right"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "ActionSet",
+                                            "actions": [
+                                                {
+                                                    "type": "Action.Submit",
+                                                    "title": "Delete",
+                                                    "data": {
+                                                        "action": "table.delete"
+                                                    },
+                                                    "style": "destructive"
+                                                }
+                                            ],
+                                            "horizontalAlignment": "Right"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "RichTextBlock",
+            "inlines": [
+                {
+                    "type": "TextRun",
+                    "text": "tables"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Previous",
+                                    "data": {
+                                        "action": "table.prev"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "id": "table.page",
+                            "type": "Input.Text",
+                            "placeholder": "page",
+                            "value": "page",
+                            "isVisible": false
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Next",
+                                    "data": {
+                                        "action": "table.next"
+                                    }
+                                }
+                            ],
+                            "horizontalAlignment": "Right"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
