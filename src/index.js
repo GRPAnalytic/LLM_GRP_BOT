@@ -54,11 +54,11 @@ teamsBot.onMessage(async (context, next) => {
 		const { from } = context.activity;
 		const { action } = value;
 
-		const currentUser = await userService.getByUserId(from.id);
-		if (!isActionAllowed(action, currentUser)) {
-			await context.sendActivity("You're unauthorized to do this action, please contact your administrator");
-			return await next();
-		}
+		// const currentUser = await userService.getByUserId(from.id);
+		// if (!isActionAllowed(action, currentUser)) {
+		// 	await context.sendActivity("You're unauthorized to do this action, please contact your administrator");
+		// 	return await next();
+		// }
 
 		if (action === 'table.prev') {
 			console.log('Clicked prev', value['table.page']);
