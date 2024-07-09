@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../database/sequelize');
 
 const ContextTemplate = sequelize.define(
-    'context_templates',
+    'bot_context_template',
     {
         context: {
             type: DataTypes.STRING,
@@ -18,6 +18,7 @@ const ContextTemplate = sequelize.define(
 );
 
 ContextTemplate.sync({ alter: true })
-    .then(() => console.log('The table for the ContextTemplate model was just (re)created!'));
+    .then(() => console.log('The table for the ContextTemplate model was just (re)created!'))
+    .catch(error => console.error('Error syncing the ContextTemplate model:', error));
 
 module.exports = ContextTemplate;

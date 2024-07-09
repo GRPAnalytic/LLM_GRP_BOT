@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../database/sequelize');
 
 const User = sequelize.define(
-    'users',
+    'bot_user',
     {
         teams_user_id: {
             type: DataTypes.STRING,
@@ -18,6 +18,7 @@ const User = sequelize.define(
 );
 
 User.sync({ alter: true })
-    .then(() => console.log('The table for the User model was just (re)created!'));
+    .then(() => console.log('The table for the User model was just (re)created!'))
+    .catch(error => console.error('Error syncing the User model:', error));
 
 module.exports = User;

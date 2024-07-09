@@ -31,7 +31,7 @@ const health = async () => {
 		return 'Connection has been established successfully.';
 	} catch (error) {
 		console.error('Unable to connect to the database:', error);
-		return 'Connection has been established successfully. ' + error;
+		return 'Unable to connect to the database:' + error;
 	}
 };
 
