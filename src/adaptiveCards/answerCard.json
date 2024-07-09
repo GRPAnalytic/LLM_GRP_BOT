@@ -29,25 +29,6 @@
             "isSubtle": true,
             "$when": "${additional_info != \"\"}",
             "wrap": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Context: ${context}",
-            "spacing": "Medium",
-            "separator": true,
-            "size": "Small",
-            "maxLines": 2,
-            "isSubtle": true,
-            "color": "Default",
-            "weight": "Default",
-            "wrap": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Included Tables: ${tables}",
-            "wrap": true,
-            "size": "Small",
-            "isSubtle": true
         }
     ]
 }
